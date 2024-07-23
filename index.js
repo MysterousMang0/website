@@ -1,19 +1,14 @@
-console.log('hello world')
+console.log('hello world');
 
-//document.getElementById("textarea").
+function login() {
+    var UserInput = document.getElementById("textarea").value;
+    if (UserInput === "12345") {
+        console.log("You have logged in as user 1");
+        localStorage.setItem("isLoggedIn", "true");
+        window.location.href = "page.html";
+    } else {
+        window.alert("Failed to log in");
+        localStorage.setItem("isLoggedIn", "false");
+    }
+}
 
-var UserInput = window.prompt("enter your password")
-
-if (UserInput === "12345") {
-    console.log("you have logged in as user 1")
-    window.location.href = "page.html";
- } else {
-    window.alert("Failed to log in")
-
- } 
-
-function getContent() {
-    var content = document.getElementById("textarea").value
-    console.log(content)
-    window.alert(content) 
-}    
